@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/lin_id"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:weightSum="8"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <!-- android:hint = same as placeholder in html       -->
+        <!--  android:lines = 5 mean that the box size will be of 5 lines      -->
+        <!-- android:freezesText save the state of the view text
+         even after configuration change (such as rotation) -->
+        <TextView
+            android:id="@+id/txt_view_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_view_msg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:freezesText="true"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <EditText
+            android:importantForAutofill="no"
+            android:id="@+id/input_text_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lines="5"
+            android:hint="@string/input_placeholder"
+            android:inputType="textMultiLine" />
+
+        <Button
+            android:id="@+id/btn_change_txt_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/send_to_txt_view_btn"
+            android:onClick="onClickFuncBtn"
+            />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
