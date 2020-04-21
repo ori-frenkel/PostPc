@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
 //                // putting the inputed text into text_view
 //                msg.setText(strValue);
 //            }
-//        });
+//        }); hello test
     }
 
     // option 2 - add in the xml android:onClick="custom on click function such as this one."
